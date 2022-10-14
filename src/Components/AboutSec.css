@@ -1,0 +1,30 @@
+#AboutSec {
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  color: #fff;
+}
+
+.aboutInfo {
+  gap: 2rem;
+  width: 75%;
+}
+
+.downloadBtn {
+  padding: 1.2rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.downloadBtn:hover {
+  background-color: #fff;
+  color: #2c3e50;
+}
