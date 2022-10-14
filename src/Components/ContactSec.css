@@ -7,3 +7,68 @@
   align-items: center;
   gap: 1.5rem;
 }
+
+.contactForm {
+  width: 50rem;
+  max-width: 50rem;
+  font-family: "Roboto";
+  font-size: 1.5rem;
+  color: #6f757d;
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactForm div input,
+.contactForm div textarea {
+  width: 45rem;
+  max-width: 45rem;
+  font-size: 1.6rem;
+  margin: 2rem 4rem 2rem 0;
+  border: none;
+  border-radius: 0px;
+  border-bottom: 1px solid #6f757d;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-bottom: 1px solid #6f757d;
+}
+
+.contactForm div label {
+  height: 8rem;
+}
+
+#message {
+  height: 8rem;
+}
+
+#message::-webkit-scrollbar {
+  width: 10px;
+}
+
+#message::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+#message::-webkit-scrollbar-thumb {
+  background-color: #1abc9c;
+  border: none;
+  border-radius: 10px;
+}
+.send {
+  align-self: flex-start;
+  padding: 1rem 2rem;
+  margin-left: 1rem;
+  color: #fff;
+  background-color: #6bd4bf;
+  border: none;
+  border-radius: 15px;
+  transition: all 0.2s ease-in-out;
+}
+
+.send:active {
+  transform: scale(0.8);
+}

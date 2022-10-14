@@ -17,12 +17,12 @@ function PortfolioSec() {
 
       <div className="container">
         <div className="row">
-          <Card src={cabin} alt="cabinImg" />
-          <Card src={cake} alt="cakeImg" />
-          <Card src={circus} alt="circusImg" />
-          <Card src={game} alt="gameImg" />
-          <Card src={safe} alt="safeImg" />
-          <Card src={submarine} alt="submarineImg" />
+          <Card src={cabin} alt="cabinImg" name="LOG CABIN" />
+          <Card src={cake} alt="cakeImg" name="TASTY CAKE" />
+          <Card src={circus} alt="circusImg" name="CIRCUS TENT" />
+          <Card src={game} alt="gameImg" name="CONTROLLER" />
+          <Card src={safe} alt="safeImg" name="LOCKED SAFE" />
+          <Card src={submarine} alt="submarineImg" name="SUBMARINE" />
         </div>
       </div>
     </section>

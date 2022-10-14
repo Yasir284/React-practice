@@ -3,6 +3,8 @@
 }
 
 .portfolioLink {
+  border: none;
+  color: #fff;
   display: none;
   position: absolute;
   top: auto;

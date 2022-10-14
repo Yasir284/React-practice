@@ -1,0 +1,59 @@
+.portfolioModel {
+  padding: 0 5rem 3rem;
+  width: 80%;
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  z-index: 9999;
+  background-color: violet;
+  border-radius: 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hide {
+  display: none;
+}
+
+.xmark {
+  margin-top: 3rem;
+  margin-bottom: -1.5rem;
+  width: 100%;
+  text-align: right;
+  transition: all 0.2s ease-in-out;
+}
+
+.xmark:hover {
+  color: rgba(0, 0, 0, 0.489);
+}
+
+.portfolioModel img {
+  width: 70%;
+}
+
+.portfolioModel p {
+  max-width: 80%;
+}
+
+.closebtn {
+  border-radius: 10px;
+  background-color: #1abc9c;
+  font-weight: 500;
+  border: none;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.closebtn:hover {
+  background-color: #127561;
+}
