@@ -1,24 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useRef } from "react";
+import { useState } from "react";
 import "./Card.css";
 import { PortfolioModel } from "./PortfolioModel";
 
 export const Card = (props) => {
-  const portfolioBtn = useRef();
-  const pModel = useRef();
-  function show() {
-    portfolioBtn.current.classList.toggle("active");
-    pModel.current.classList.remove("hide");
-  }
-
-  // portfolioCloseRef.current.click = () => {
-  //   console.log("incide hide");
-  //   show();
-  // };
-
-  // portfolioCloseRef.current.addEventListner("click", () => {
-  //   pModel.current.classList.add("hide");
-  // });
+  const [buttonPopup, setButtonPopup] = useState(false);
 
   return (
     <>
@@ -31,9 +17,8 @@ export const Card = (props) => {
           />
 
           <button
-            ref={portfolioBtn}
             className="portfolioLink rounded"
-            onClick={show}
+            onClick={() => setButtonPopup(true)}
           >
             <a href={props.link}>
               <FontAwesomeIcon icon="plus" className="icon" size="5x" />
@@ -41,7 +26,13 @@ export const Card = (props) => {
           </button>
         </div>
       </div>
-      <PortfolioModel innerRef={pModel} img={props.src} name={props.name} />
+
+      <PortfolioModel
+        trigger={buttonPopup}
+        closePopup={setButtonPopup}
+        img={props.src}
+        name={props.name}
+      />
     </>
   );
 };

@@ -1,34 +1,77 @@
-.portfolioModel {
-  padding: 0 5rem 3rem;
-  width: 80%;
-  position: absolute;
-  top: 5%;
-  left: 10%;
+.portfolioModelDiv {
+  overflow-y: scroll;
+  position: fixed;
+  top: 0%;
+  left: 0%;
   z-index: 9999;
-  background-color: violet;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolioModelDiv::-webkit-scrollbar {
+  display: none;
+}
+.portfolioModel {
+  position: relative;
+  padding: 2rem;
+  width: 45%;
+  background-color: #fff;
   border-radius: 25px;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  gap: 0.8rem;
+
+  animation: popup 0.3s ease-in-out;
 }
 
-.hide {
-  display: none;
+@keyframes popup {
+  0% {
+    scale: 0;
+    opacity: 0;
+  }
+
+  25% {
+    scale: 0.25;
+    opacity: 0.25;
+  }
+
+  50% {
+    scale: 0.5;
+    opacity: 0.5;
+  }
+
+  75% {
+    scale: 0.75;
+    opacity: 0.75;
+  }
+
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
 }
 
+.projectName {
+  font-weight: 800;
+  margin-bottom: -0.8rem;
+}
 .xmark {
-  margin-top: 3rem;
-  margin-bottom: -1.5rem;
-  width: 100%;
-  text-align: right;
+  position: absolute;
+  top: 5%;
+  right: 8%;
   transition: all 0.2s ease-in-out;
+  color: rgba(0, 0, 0, 0.489);
 }
 
 .xmark:hover {
-  color: rgba(0, 0, 0, 0.489);
+  color: #000;
 }
 
 .portfolioModel img {
@@ -36,6 +79,7 @@
 }
 
 .portfolioModel p {
+  color: #000;
   max-width: 80%;
 }
 
