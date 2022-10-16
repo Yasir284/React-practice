@@ -2,38 +2,40 @@ import "./Navbar.css";
 import { useRef } from "react";
 
 function Navbar(props) {
-  const navScroll = useRef(null);
-  document.addEventListener("scroll", (e) => {
+  const navScroll = useRef();
+  const navRef = useRef();
+  const hamburgerRef = useRef();
+  document.addEventListener("scroll", () => {
     if (window.scrollY > 66) {
-      console.log("hello");
       navScroll.current.style.padding = "1rem 5rem";
     } else {
       navScroll.current.style.padding = "2rem 5rem";
     }
   });
 
+  function navSlide(e) {
+    navRef.current.classList.toggle("showList");
+    hamburgerRef.current.classList.toggle("changeHamburger");
+    e.preventDefault();
+  }
+
   return (
-    <nav
-      className="nav d-flex flex-row align-items-center justify-content-between"
-      ref={navScroll}
-    >
+    <nav className="nav" ref={navScroll}>
       <h2 className="logo fw-bold m-0 p-0">START BOOTSTRAP</h2>
 
-      <ul className="list d-flex flex-row align-items-center list-unstyled">
+      <div className="ham" onClick={navSlide}>
+        <div className="hamburger" ref={hamburgerRef}></div>
+      </div>
+
+      <ul className="list" ref={navRef}>
         <li className="list-items">
-          <a className="text-decoration-none fw-bold" href="#PortfolioSec">
-            PORTFOLIO
-          </a>
+          <a href="#PortfolioSec">PORTFOLIO</a>
         </li>
         <li className="list-items">
-          <a className="text-decoration-none fw-bold" href="#AboutSec">
-            ABOUT
-          </a>
+          <a href="#AboutSec">ABOUT</a>
         </li>
         <li className="list-items">
-          <a className="text-decoration-none fw-bold" href="#ContactSec">
-            CONTACT
-          </a>
+          <a href="#ContactSec">CONTACT</a>
         </li>
       </ul>
     </nav>

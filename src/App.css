@@ -50,6 +50,10 @@ h1 {
   html {
     font-size: 14px;
   }
+
+  .ham {
+    display: none;
+  }
 }
 
 @media (min-width: 958px) {

@@ -5,7 +5,11 @@
   padding: 2rem 5rem;
   background-color: #2c3e50;
   color: #fff;
-  transition: all 0.1s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.25s ease-in-out;
 }
 
 .logo {
@@ -14,12 +18,29 @@
 }
 
 .list {
-  margin: 0%;
-  padding: 0%;
-  gap: 3.5rem;
+  list-style: none;
+  inset: 0 0 0 40%;
+  height: 100vh;
+  padding: min(30vh, 10rem) 0rem;
+  background: rgba(44, 62, 80, 0.187);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  right: 0%;
+  transform: translateX(100%);
+  transition: all 0.3s ease-in-out;
+}
+
+.showList {
+  transform: translateX(0);
+}
+
+.list-items {
+  padding: 2rem;
 }
 
 .list-items a {
+  text-decoration: none;
+  font-weight: 600;
   font-size: 1rem;
   color: #fff;
   transition: all 0.2s ease-in-out;
@@ -27,4 +48,83 @@
 
 .list-items a:hover {
   color: #1abc9c;
+}
+
+.ham {
+  width: 2rem;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger,
+.changeHamburger {
+  z-index: 10;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.hamburger::after,
+.hamburger::before,
+.changeHamburger::after,
+.changeHamburger::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2.1px;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+}
+
+.hamburger::after {
+  transform: translateY(6px);
+}
+
+.hamburger::before {
+  transform: translateY(-8px);
+}
+
+.hamburger:active {
+  transform: scale(0.8);
+}
+
+.changeHamburger {
+  transform: translateX(-50px);
+  background-color: transparent;
+}
+.changeHamburger::after {
+  transform: rotate(-45deg) translate(37px, 34px);
+}
+
+.changeHamburger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+@media (min-width: 675px) {
+  .list {
+    height: auto;
+    background-color: transparent;
+    position: static;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+    margin: 0%;
+    padding: 0%;
+    transform: translate(0%);
+  }
+
+  .list-items {
+    padding: 0%;
+  }
+  .ham {
+    display: none;
+  }
 }
