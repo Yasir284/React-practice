@@ -12,6 +12,11 @@
   transition: all 0.25s ease-in-out;
 }
 
+nav:hover {
+  opacity: 1;
+  transition: all 300ms ease-in-out;
+}
+
 .logo {
   font-size: 1.8rem;
   cursor: pointer;
@@ -104,6 +109,11 @@
 
 .changeHamburger::before {
   transform: rotate(45deg) translate(35px, -35px);
+}
+
+.hide {
+  opacity: 0;
+  transition: all 300ms ease-in-out;
 }
 
 @media (min-width: 675px) {

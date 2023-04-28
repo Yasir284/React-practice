@@ -1,17 +1,25 @@
 import "./Navbar.css";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 function Navbar(props) {
-  const navScroll = useRef();
   const navRef = useRef();
   const hamburgerRef = useRef();
-  document.addEventListener("scroll", () => {
-    if (window.scrollY > 66) {
-      navScroll.current.style.padding = "1rem 5rem";
-    } else {
-      navScroll.current.style.padding = "2rem 5rem";
-    }
-  });
+
+  useEffect(() => {
+    const sectionObserver = new IntersectionObserver(
+      function (entries) {
+        if (!entries[0].isIntersecting && window.innerWidth > 675) {
+          document.querySelector("nav").classList.add("hide");
+        } else {
+          document.querySelector("nav").classList.remove("hide");
+        }
+      },
+      { root: null, threshold: 0.4 }
+    );
+
+    const sectionOne = document.querySelector("#HeroSec");
+    sectionObserver.observe(sectionOne);
+  }, []);
 
   function navSlide(e) {
     navRef.current.classList.toggle("showList");
@@ -20,7 +28,7 @@ function Navbar(props) {
   }
 
   return (
-    <nav className="nav" ref={navScroll}>
+    <nav className="nav">
       <h2 className="logo fw-bold m-0 p-0">START BOOTSTRAP</h2>
 
       <div className="ham" onClick={navSlide}>

@@ -5,7 +5,7 @@ function HeroSec(props) {
   return (
     <section
       id="HeroSec"
-      className="d-flex flex-column justify-content-center align-items-center gap-4"
+      className="d-flex flex-column justify-content-center align-items-center gap-4 min-vh-100"
     >
       <img className="avatarImg" src={props.img} alt="avatarImg" />
 

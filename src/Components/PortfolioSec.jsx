@@ -10,7 +10,7 @@ import submarine from "../assets/img/portfolio/submarine.png";
 
 function PortfolioSec() {
   return (
-    <section id="PortfolioSec">
+    <section id="PortfolioSec" className="min-vh-100">
       <h1>PORTFOLIO</h1>
 
       <LineBreak lineStyle={{ backgroundColor: "#2c3e50" }} />

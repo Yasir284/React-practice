@@ -3,7 +3,7 @@ import { LineBreak } from "./LineBreak";
 
 function ContactSec() {
   return (
-    <section id="ContactSec">
+    <section id="ContactSec" className="min-vh-100">
       <h1>CONTACT ME</h1>
       <LineBreak lineStyle={{ backgroundColor: "#2c3e50" }} />
 

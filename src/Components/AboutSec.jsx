@@ -1,13 +1,12 @@
 import "./AboutSec.css";
 import { LineBreak } from "./LineBreak";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+// import "../../node_modules/bootstrap/scss/vendor/_variable";
 function AboutSec() {
   return (
-    <section id="AboutSec">
+    <section id="AboutSec" className="min-vh-100">
       <h1>ABOUT</h1>
       <LineBreak />
-
       <div className="aboutInfo fs-5 d-flex flex-row justify-content-center align-items-center">
         <p>
           Freelancer is a free bootstrap theme created by Start Bootstrap. The
